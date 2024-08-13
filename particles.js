@@ -5,7 +5,7 @@ for (let i = 0; i < particleCount; i++) {
   const particle = document.createElement("div");
   particle.className = "particle";
   particleContainer.appendChild(particle);
-  const size = Math.random() * 5 + 2; // 随机大小
+  const size = Math.random() * 10 + 2; // 随机大小
   particle.style.width = `${size}px`;
   particle.style.height = `${size}px`;
   particle.style.backgroundColor = "rgba(255, 192, 203, 0.5)"; // 粉色粒子
