@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* 纵向排列中心内容 */
+  background-color: #000000; /* 背景颜色 */
+  overflow: hidden; /* 隐藏溢出内容 */
+}
+
+.title {
+  color: pink; /* 粉红色文本 */
+  font-size: 2.5em; /* 大字体 */
+  font-weight: bold; /* 加粗 */
+  margin-bottom: 150px; /* 文本和爱心之间的间距 */
+}
+
+.heart {
+  position: relative;
+  width: 150px; /* 增大爱心宽度 */
+  height: 150px; /* 增大爱心高度 */
+  background-color: pink; /* 粉红色 */
+  transform: rotate(-45deg);
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 150px; /* 同样增大右半部分 */
+  height: 150px; /* 同样增大左半部分 */
+  background-color: pink; /* 粉红色 */
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -75px; /* 上半部分调整 */
+  left: 0;
+}
+
+.heart::after {
+  left: 75px; /* 右半部分调整 */
+  top: 0;
+}
+
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none; /* 不阻止下面的交互 */
+}
